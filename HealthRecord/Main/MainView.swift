@@ -9,28 +9,26 @@ import SwiftUI
 
 struct MainView: View {
     
-    var selectedSymbol: String
-
-    init(selectedSymbol: String) {
-        self.selectedSymbol = selectedSymbol
-    }
+    var mainVM = MainViewModel(symbols: ["sun.min", "moon.fill", "cloud.rain.fill", "cloud.snow.fill", "wind.snow"])
+    
+    @State var symbol = "sun.min"
     
     var body: some View {
         VStack {
             
             Spacer()
             
-            Image(systemName: selectedSymbol)
+            Image(systemName: symbol)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .padding()
             
-            Text(selectedSymbol.split(separator: ".")[0])
+            Text(symbol.split(separator: ".")[0])
             
             Spacer()
             
             Button {
-                print("button clicked")
+                symbol = mainVM.getRandomElement()
             } label: {
                 Text("날씨 바꾸기")
             }
@@ -41,7 +39,6 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        let symbols = ["sun.min", "moon.fill", "cloud.rain.fill", "cloud.snow.fill", "wind.snow"]
-        MainView(selectedSymbol: symbols.randomElement()!)
+        MainView()
     }
 }

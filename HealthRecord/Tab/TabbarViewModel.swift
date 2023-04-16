@@ -8,9 +8,5 @@
 import Foundation
 
 class TabbarViewModel: ObservableObject {
-    @Published var symbols: [String]
     
-    init(symbols: [String]) {
-        self.symbols = symbols
-    }
 }

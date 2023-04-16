@@ -9,11 +9,9 @@ import SwiftUI
 
 struct TabbarView: View {
     
-    let vm = TabbarViewModel(symbols: ["sun.min", "moon.fill", "cloud.rain.fill", "cloud.snow.fill", "wind.snow"])
-    
     var body: some View {
             TabView {
-                MainView(selectedSymbol: vm.symbols.randomElement()!)
+                MainView()
                     .tabItem {
                         Image(systemName: "house.fill")
                         Text("운동")
