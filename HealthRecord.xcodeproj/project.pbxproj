@@ -11,6 +11,7 @@
 		CDE4D02629EC1A1C008CF592 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE4D02529EC1A1C008CF592 /* MainView.swift */; };
 		CDE4D02929EC1A52008CF592 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE4D02829EC1A52008CF592 /* RecordView.swift */; };
 		CDE4D02C29EC1AF9008CF592 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE4D02B29EC1AF9008CF592 /* SettingView.swift */; };
+		CDE4D03129EC1F02008CF592 /* TabbarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE4D03029EC1F02008CF592 /* TabbarViewModel.swift */; };
 		CDF2FC8F29EC172A00CB09BE /* HealthRecordApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF2FC8E29EC172A00CB09BE /* HealthRecordApp.swift */; };
 		CDF2FC9129EC172A00CB09BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF2FC9029EC172A00CB09BE /* ContentView.swift */; };
 		CDF2FC9329EC172B00CB09BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF2FC9229EC172B00CB09BE /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		CDE4D02529EC1A1C008CF592 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CDE4D02829EC1A52008CF592 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
 		CDE4D02B29EC1AF9008CF592 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		CDE4D03029EC1F02008CF592 /* TabbarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewModel.swift; sourceTree = "<group>"; };
 		CDF2FC8B29EC172A00CB09BE /* HealthRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF2FC8E29EC172A00CB09BE /* HealthRecordApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthRecordApp.swift; sourceTree = "<group>"; };
 		CDF2FC9029EC172A00CB09BE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -103,6 +105,15 @@
 			path = Setting;
 			sourceTree = "<group>";
 		};
+		CDE4D02F29EC1EF8008CF592 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				CDE4D02329EC19D0008CF592 /* TabbarView.swift */,
+				CDE4D03029EC1F02008CF592 /* TabbarViewModel.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
 		CDF2FC8229EC172A00CB09BE = {
 			isa = PBXGroup;
 			children = (
@@ -128,7 +139,7 @@
 			children = (
 				CDF2FC8E29EC172A00CB09BE /* HealthRecordApp.swift */,
 				CDF2FC9029EC172A00CB09BE /* ContentView.swift */,
-				CDE4D02329EC19D0008CF592 /* TabbarView.swift */,
+				CDE4D02F29EC1EF8008CF592 /* Tab */,
 				CDE4D02E29EC1B04008CF592 /* Setting */,
 				CDE4D02A29EC1A58008CF592 /* Record */,
 				CDE4D02729EC1A2F008CF592 /* Main */,
@@ -295,6 +306,7 @@
 			files = (
 				CDE4D02429EC19D0008CF592 /* TabbarView.swift in Sources */,
 				CDE4D02629EC1A1C008CF592 /* MainView.swift in Sources */,
+				CDE4D03129EC1F02008CF592 /* TabbarViewModel.swift in Sources */,
 				CDF2FC9129EC172A00CB09BE /* ContentView.swift in Sources */,
 				CDE4D02C29EC1AF9008CF592 /* SettingView.swift in Sources */,
 				CDE4D02929EC1A52008CF592 /* RecordView.swift in Sources */,
