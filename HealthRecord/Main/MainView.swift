@@ -9,9 +9,9 @@ import SwiftUI
 
 struct MainView: View {
     
-    var mainVM = MainViewModel(symbols: ["sun.min", "moon.fill", "cloud.rain.fill", "cloud.snow.fill", "wind.snow"])
+    let mainVM = MainViewModel(symbols: ["sun.min", "moon.fill", "cloud.rain.fill", "cloud.snow.fill", "wind.snow"])
     
-    @State var symbol = "sun.min"
+    @State private var symbol = "sun.min"
     
     var body: some View {
         VStack {
