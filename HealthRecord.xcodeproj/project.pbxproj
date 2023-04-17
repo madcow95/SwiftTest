@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD5721D829ED3C0000255145 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5721D729ED3C0000255145 /* Record.swift */; };
+		CD5721DA29ED3C2400255145 /* RecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5721D929ED3C2400255145 /* RecordViewModel.swift */; };
 		CDE4D02429EC19D0008CF592 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE4D02329EC19D0008CF592 /* TabbarView.swift */; };
 		CDE4D02629EC1A1C008CF592 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE4D02529EC1A1C008CF592 /* MainView.swift */; };
 		CDE4D02929EC1A52008CF592 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE4D02829EC1A52008CF592 /* RecordView.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD5721D729ED3C0000255145 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		CD5721D929ED3C2400255145 /* RecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewModel.swift; sourceTree = "<group>"; };
 		CDE4D02329EC19D0008CF592 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		CDE4D02529EC1A1C008CF592 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CDE4D02829EC1A52008CF592 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				CDE4D02829EC1A52008CF592 /* RecordView.swift */,
+				CD5721D729ED3C0000255145 /* Record.swift */,
+				CD5721D929ED3C2400255145 /* RecordViewModel.swift */,
 			);
 			path = Record;
 			sourceTree = "<group>";
@@ -309,6 +315,8 @@
 			files = (
 				CDE4D02429EC19D0008CF592 /* TabbarView.swift in Sources */,
 				CDE4D02629EC1A1C008CF592 /* MainView.swift in Sources */,
+				CD5721D829ED3C0000255145 /* Record.swift in Sources */,
+				CD5721DA29ED3C2400255145 /* RecordViewModel.swift in Sources */,
 				CDE4D03129EC1F02008CF592 /* TabbarViewModel.swift in Sources */,
 				CDF2FC9129EC172A00CB09BE /* ContentView.swift in Sources */,
 				CDE4D02C29EC1AF9008CF592 /* SettingView.swift in Sources */,
