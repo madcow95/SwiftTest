@@ -8,5 +8,13 @@
 import Foundation
 
 class RecordViewModel {
+    let name: String
+    let chat: String
+    let date: String
     
+    init(name: String, chat: String, date: String) {
+        self.name = name
+        self.chat = chat
+        self.date = date
+    }
 }

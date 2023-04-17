@@ -9,13 +9,37 @@ import SwiftUI
 
 struct RecordView: View {
     
+    let chatList = Chat.list
+    let vm: RecordViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach(chatList, id: \.self) { chat in
+                HStack {
+                    Image(systemName: "macpro.gen1.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 80, height: 80)
+                        
+                    Spacer()
+                    
+                    VStack {
+                        Text(chat.name)
+                        Text(chat.chat)
+                    }
+                    
+                    Spacer()
+                    
+                    Text(chat.date)
+                }
+            }
+        }
     }
 }
 
 struct RecordView_Previews: PreviewProvider {
     static var previews: some View {
-        RecordView()
+        let firstChat = Chat.list[0]
+        RecordView(vm: RecordViewModel(name: firstChat.name, chat: firstChat.chat, date: firstChat.date))
     }
 }

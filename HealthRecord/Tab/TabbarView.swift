@@ -17,17 +17,17 @@ struct TabbarView: View {
                         Text("운동")
                     }
                 
-                RecordView()
+                RecordView(vm: RecordViewModel(name: "", chat: "", date: ""))
                     .tabItem {
                         Image(systemName: "dumbbell.fill")
                         Text("기록")
                     }
                 
-                RecordView()
-                    .tabItem {
-                        Image(systemName: "ellipsis")
-                        Text("설정")
-                    }
+//                RecordView()
+//                    .tabItem {
+//                        Image(systemName: "ellipsis")
+//                        Text("설정")
+//                    }
             }
     }
 }
