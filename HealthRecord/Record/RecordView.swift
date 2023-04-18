@@ -12,6 +12,8 @@ struct RecordView: View {
     let chatList = Chat.list
     let vm: RecordViewModel
     
+    @State private var showModal = false
+    
     var body: some View {
         List {
             ForEach(chatList, id: \.self) { chat in
@@ -31,6 +33,12 @@ struct RecordView: View {
                     Spacer()
                     
                     Text(chat.date)
+                }
+                .onTapGesture {
+                    self.showModal = true
+                }
+                .sheet(isPresented: self.$showModal) {
+                    RecordDetailView(chat: chat)
                 }
             }
         }
