@@ -10,9 +10,9 @@ import SwiftUI
 struct RecordView: View {
     
     let chatList = Chat.list
-    let vm: RecordViewModel
     
     @State private var showModal = false
+    @State private var selectedItem: Chat?
     
     var body: some View {
         List {
@@ -22,6 +22,10 @@ struct RecordView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 80, height: 80)
+                        .onTapGesture {
+                            showModal = true
+                            selectedItem = chat
+                        }
                         
                     Spacer()
                     
@@ -34,12 +38,9 @@ struct RecordView: View {
                     
                     Text(chat.date)
                 }
-                .onTapGesture {
-                    self.showModal = true
-                }
-                .sheet(isPresented: self.$showModal) {
-                    RecordDetailView(chat: chat)
-                }
+            }
+            .sheet(item: $selectedItem) { item in
+                RecordDetailView(chat: item)
             }
         }
     }
@@ -47,7 +48,6 @@ struct RecordView: View {
 
 struct RecordView_Previews: PreviewProvider {
     static var previews: some View {
-        let firstChat = Chat.list[0]
-        RecordView(vm: RecordViewModel(name: firstChat.name, chat: firstChat.chat, date: firstChat.date))
+        RecordView()
     }
 }

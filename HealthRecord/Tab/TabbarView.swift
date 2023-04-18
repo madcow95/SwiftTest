@@ -17,7 +17,7 @@ struct TabbarView: View {
                         Text("운동")
                     }
                 
-                RecordView(vm: RecordViewModel(name: "", chat: "", date: ""))
+                RecordView()
                     .tabItem {
                         Image(systemName: "dumbbell.fill")
                         Text("기록")
