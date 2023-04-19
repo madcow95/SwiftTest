@@ -14,17 +14,11 @@ struct RecordDetailView: View {
     var body: some View {
         VStack {
             Spacer()
-            
             Text(chat.name)
-            
             Spacer()
-            
             Text(chat.chat)
-
             Spacer()
-            
             Text(chat.date)
-            
             Spacer()
         }
     }
