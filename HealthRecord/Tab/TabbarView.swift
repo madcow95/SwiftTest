@@ -11,23 +11,7 @@ struct TabbarView: View {
     
     var body: some View {
             TabView {
-                MainView()
-                    .tabItem {
-                        Image(systemName: "house.fill")
-                        Text("운동")
-                    }
                 
-                RecordView()
-                    .tabItem {
-                        Image(systemName: "dumbbell.fill")
-                        Text("기록")
-                    }
-                
-//                RecordView()
-//                    .tabItem {
-//                        Image(systemName: "ellipsis")
-//                        Text("설정")
-//                    }
             }
     }
 }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// 흐음.. 무슨앱을 만들어볼까
 struct MainView: View {
     
     let mainVM = MainViewModel(symbols: ["sun.min", "moon.fill", "cloud.rain.fill", "cloud.snow.fill", "wind.snow"])
