@@ -11,7 +11,28 @@ struct TabbarView: View {
     
     var body: some View {
             TabView {
+                LoginView(username: "", password: "")
+                    .tabItem {
+                        Image(systemName: "person.fill")
+                        Text("로그인")
+                    }
+//                MainView()
+//                    .tabItem {
+//                        Image(systemName: "house.fill")
+//                        Text("운동")
+//                    }
                 
+//                RecordView()
+//                    .tabItem {
+//                        Image(systemName: "dumbbell.fill")
+//                        Text("기록")
+//                    }
+                
+//                RecordView()
+//                    .tabItem {
+//                        Image(systemName: "ellipsis")
+//                        Text("설정")
+//                    }
             }
     }
 }

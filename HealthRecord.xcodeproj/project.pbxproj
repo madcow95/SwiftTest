@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD1C740929F17B570089AF80 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1C740829F17B570089AF80 /* LoginView.swift */; };
 		CDE4D02429EC19D0008CF592 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE4D02329EC19D0008CF592 /* TabbarView.swift */; };
 		CDE4D03129EC1F02008CF592 /* TabbarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE4D03029EC1F02008CF592 /* TabbarViewModel.swift */; };
 		CDF2FC8F29EC172A00CB09BE /* HealthRecordApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF2FC8E29EC172A00CB09BE /* HealthRecordApp.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD1C740829F17B570089AF80 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CDE4D02329EC19D0008CF592 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		CDE4D03029EC1F02008CF592 /* TabbarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewModel.swift; sourceTree = "<group>"; };
 		CDF2FC8B29EC172A00CB09BE /* HealthRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD1C740A29F17B6E0089AF80 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CD1C740829F17B570089AF80 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		CDE4D02F29EC1EF8008CF592 /* Tab */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +117,7 @@
 		CDF2FC8D29EC172A00CB09BE /* HealthRecord */ = {
 			isa = PBXGroup;
 			children = (
+				CD1C740A29F17B6E0089AF80 /* Login */,
 				CDF2FC8E29EC172A00CB09BE /* HealthRecordApp.swift */,
 				CDF2FC9029EC172A00CB09BE /* ContentView.swift */,
 				CDE4D02F29EC1EF8008CF592 /* Tab */,
@@ -274,6 +285,7 @@
 				CDE4D02429EC19D0008CF592 /* TabbarView.swift in Sources */,
 				CDE4D03129EC1F02008CF592 /* TabbarViewModel.swift in Sources */,
 				CDF2FC9129EC172A00CB09BE /* ContentView.swift in Sources */,
+				CD1C740929F17B570089AF80 /* LoginView.swift in Sources */,
 				CDF2FC8F29EC172A00CB09BE /* HealthRecordApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
