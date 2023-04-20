@@ -16,11 +16,11 @@ struct TabbarView: View {
                         Image(systemName: "person.fill")
                         Text("로그인")
                     }
-//                MainView()
-//                    .tabItem {
-//                        Image(systemName: "house.fill")
-//                        Text("운동")
-//                    }
+                JoinView()
+                    .tabItem {
+                        Image(systemName: "person.badge.plus")
+                        Text("회원가입")
+                    }
                 
 //                RecordView()
 //                    .tabItem {
