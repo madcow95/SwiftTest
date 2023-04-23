@@ -95,6 +95,15 @@
 			path = Join;
 			sourceTree = "<group>";
 		};
+		CD1C740E29F1801A0089AF80 /* Member */ = {
+			isa = PBXGroup;
+			children = (
+				CD1C740A29F17B6E0089AF80 /* Login */,
+				CD1C740D29F17EF40089AF80 /* Join */,
+			);
+			path = Member;
+			sourceTree = "<group>";
+		};
 		CDE4D02F29EC1EF8008CF592 /* Tab */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,8 +136,7 @@
 		CDF2FC8D29EC172A00CB09BE /* HealthRecord */ = {
 			isa = PBXGroup;
 			children = (
-				CD1C740A29F17B6E0089AF80 /* Login */,
-				CD1C740D29F17EF40089AF80 /* Join */,
+				CD1C740E29F1801A0089AF80 /* Member */,
 				CDE4D02F29EC1EF8008CF592 /* Tab */,
 				CDF2FC8E29EC172A00CB09BE /* HealthRecordApp.swift */,
 				CDF2FC9029EC172A00CB09BE /* ContentView.swift */,
