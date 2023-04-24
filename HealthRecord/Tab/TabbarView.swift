@@ -16,7 +16,7 @@ struct TabbarView: View {
                         Image(systemName: "person.fill")
                         Text("로그인")
                     }
-                JoinView()
+                JoinView(username: "", password: "", passwordChk: "")
                     .tabItem {
                         Image(systemName: "person.badge.plus")
                         Text("회원가입")
