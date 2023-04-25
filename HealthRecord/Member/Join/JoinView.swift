@@ -13,6 +13,7 @@ struct JoinView: View {
     @State var password: String
     @State var passwordChk: String
     
+// 망할 예비군
     var body: some View {
         VStack {
             TextField("아이디를 입력하세요.", text: $username)
