@@ -22,31 +22,36 @@ struct LoginView: View {
                 .padding()
                 .background(Color(uiColor: .secondarySystemBackground))
             
-            Button("로그인") {
-                if username.isEmpty {
-                    emptyCheck = true
-                } else if password.isEmpty {
-                    emptyCheck = true
-                } else {
-                    emptyCheck = false
+            HStack {
+                Button("로그인") {
+                    if username.isEmpty {
+                        emptyCheck = true
+                    } else if password.isEmpty {
+                        emptyCheck = true
+                    } else {
+                        emptyCheck = false
+                    }
+                    
+                    if emptyCheck {
+                        return
+                    } else {
+                        print("아이디 >> \($username.wrappedValue)")
+                        print("비밀번호 >> \($password.wrappedValue)")
+                    }
+                }
+                .alert("오류!", isPresented: $emptyCheck) {
+                    Button("Ok") {}
+                } message: {
+                    Text("아이디와 비밀번호를 입력해주세요.")
                 }
                 
-                if emptyCheck {
-                    print("입력되지 않은 곳이 있다.")
-                } else {
-                    print("아이디 >> \($username.wrappedValue)")
-                    print("비밀번호 >> \($password.wrappedValue)")
-                }
+                let joinView = JoinView(username: "", password: "", passwordChk: "")
                 
+                NavigationLink(destination: joinView) {
+                    Text("회원가입")
+                }
             }
-            .alert("오류!", isPresented: $emptyCheck) {
-                Button("Ok") {}
-            } message: {
-                Text("아이디와 비밀번호를 입력해주세요.")
-            }
-            
         }
-        
         .padding()
     }
 }
