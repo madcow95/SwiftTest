@@ -12,6 +12,13 @@ struct JoinView: View {
     @State var username: String
     @State var password: String
     @State var passwordChk: String
+    @State var errOccured = false
+    @State var emptyCheck = false
+    @State var pwdCheck = false
+    
+    @State var errMsg = ""
+    
+    let commonUtil = CommonUtil()
     
     var body: some View {
         VStack {
@@ -26,6 +33,31 @@ struct JoinView: View {
             SecureField("비밀번호 확인", text: $passwordChk)
                 .padding()
                 .background(Color(uiColor: .secondarySystemBackground))
+            
+            Button("회원가입") {
+                emptyCheck = commonUtil.emptyCheck([username, password, passwordChk])
+                
+                if emptyCheck {
+                    errOccured = true
+                    emptyCheck = true
+                }
+                
+                if !errOccured && password != passwordChk {
+                    errOccured = true
+                    pwdCheck = true
+                }
+                
+                if emptyCheck {
+                    errMsg = "입력되지 않은 항목이 있습니다."
+                } else if pwdCheck {
+                    errMsg = "비밀번호, 비밀번호 확인이 일치하지 않습니다."
+                }
+            }
+            .alert("오류!", isPresented: $errOccured) {
+                Button("Ok") {}
+            } message: {
+                Text(errMsg)
+            }
         }
         .padding()
     }

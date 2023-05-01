@@ -12,43 +12,39 @@ struct LoginView: View {
     @State var password: String
     @State var emptyCheck: Bool = false
     
+    let commonUtil = CommonUtil()
+    
     var body: some View {
         VStack {
-            TextField("아이디를 입력하세요.", text: $username)
-                .padding()
-                .background(Color(uiColor: .secondarySystemBackground))
-            
-            SecureField("비밀번호를 입력하세요", text: $password)
-                .padding()
-                .background(Color(uiColor: .secondarySystemBackground))
-            
-            HStack {
-                Button("로그인") {
-                    if username.isEmpty {
-                        emptyCheck = true
-                    } else if password.isEmpty {
-                        emptyCheck = true
-                    } else {
-                        emptyCheck = false
-                    }
-                    
-                    if emptyCheck {
-                        return
-                    } else {
-                        print("아이디 >> \($username.wrappedValue)")
-                        print("비밀번호 >> \($password.wrappedValue)")
-                    }
-                }
-                .alert("오류!", isPresented: $emptyCheck) {
-                    Button("Ok") {}
-                } message: {
-                    Text("아이디와 비밀번호를 입력해주세요.")
-                }
+            NavigationStack {
                 
-                let joinView = JoinView(username: "", password: "", passwordChk: "")
+                TextField("아이디를 입력하세요.", text: $username)
+                    .padding()
+                    .background(Color(uiColor: .secondarySystemBackground))
                 
-                NavigationLink(destination: joinView) {
-                    Text("회원가입")
+                SecureField("비밀번호를 입력하세요", text: $password)
+                    .padding()
+                    .background(Color(uiColor: .secondarySystemBackground))
+                
+                HStack {
+                    Button("로그인") {
+                        emptyCheck = commonUtil.emptyCheck([username, password])
+                        
+                        if emptyCheck {
+                            return
+                        } else {
+                            print("아이디 >> \($username.wrappedValue)")
+                            print("비밀번호 >> \($password.wrappedValue)")
+                        }
+                    }
+                    .alert("오류!", isPresented: $emptyCheck) {
+                        Button("Ok") {}
+                    } message: {
+                        Text("아이디와 비밀번호를 입력해주세요.")
+                    }
+                    NavigationLink(destination: JoinView(username: "", password: "", passwordChk: "")) {
+                        Text("회원가입")
+                    }
                 }
             }
         }
