@@ -39,17 +39,16 @@ struct JoinView: View {
                 
                 if emptyCheck {
                     errOccured = true
-                    emptyCheck = true
                 }
                 
-                if !errOccured && password != passwordChk {
-                    errOccured = true
-                    pwdCheck = true
+                if !errOccured {
+                    pwdCheck = commonUtil.isEqual(password, passwordChk)
+                    errOccured = !pwdCheck
                 }
                 
                 if emptyCheck {
                     errMsg = "입력되지 않은 항목이 있습니다."
-                } else if pwdCheck {
+                } else if !pwdCheck {
                     errMsg = "비밀번호, 비밀번호 확인이 일치하지 않습니다."
                 }
             }
