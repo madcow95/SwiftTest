@@ -15,7 +15,6 @@ struct JoinView: View {
     @State var errOccured = false
     @State var emptyCheck = false
     @State var pwdCheck = false
-    
     @State var errMsg = ""
     
     let commonUtil = CommonUtil()
