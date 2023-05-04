@@ -3,6 +3,7 @@
 //  HealthRecord
 //
 //  Created by ChoiKwangWoo on 2023/04/20.
+//  아.. 인강듣느라 아무것도 못햇다
 //
 
 import SwiftUI
