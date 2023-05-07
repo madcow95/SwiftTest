@@ -34,6 +34,7 @@ struct JoinView: View {
                 .padding()
                 .background(Color(uiColor: .secondarySystemBackground))
             
+            
             Button("회원가입") {
                 emptyCheck = commonUtil.emptyCheck([username, password, passwordChk])
                 
